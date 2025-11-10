@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Match Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Memory Match Game</h1>
+    <p id="description">
+      A fun memory card game where you flip cards to find matching pairs.
+    </p>
+    <p id="how-to-play">
+      <strong>How to play:</strong> Click on a card to reveal it. Then click another card. 
+      If they match, they stay flipped. Try to match all pairs in as few moves as possible!
+    </p>
+  </header>
+
+  <section id="hud">
+    <div>Moves: <span id="moves">0</span></div>
+    <div>Best Score: <span id="best-score">-</span></div>
+    <div>time:<span id="time">0</span></div>
+    <button id="newGameBtn">New Game</button>
+  </section>
+
+  <main id="gameBoard"></main>
+
+  <footer>
+    <p>Icons by <a href="https://www.flaticon.com/" target="_blank">Flaticon</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
