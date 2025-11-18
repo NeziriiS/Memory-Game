@@ -35,17 +35,6 @@ aria-label describes the card as "hidden" or "Card X" when revealed
 aria-pressed shows whether a card is flipped
 HUD uses aria-live="polite" for timer updates
 
-Visual focus outlines are replaced with custom styles for clarity
-
-📂 Folder Structure
-📁 project
-│── index.html
-│── style.css
-│── script.js
-│── 📁 images
-│      └── 1.jpeg, 2.jpeg, ...
-│── README.md
-
 -Technologies:
 HTML5
 CSS3 (flex, grid, responsive design, aspect-ratio)
