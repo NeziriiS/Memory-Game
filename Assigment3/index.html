@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Memory Match Game — flip cards to find matching pairs. Try to finish in as few moves as possible.">
   <title>Memory Match Game</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -13,24 +14,41 @@
       A fun memory card game where you flip cards to find matching pairs.
     </p>
     <p id="how-to-play">
-      <strong>How to play:</strong> Click on a card to reveal it. Then click another card. 
+      <strong>How to play:</strong> Click on a card to reveal it, then click another card.
       If they match, they stay flipped. Try to match all pairs in as few moves as possible!
     </p>
   </header>
 
-  <section id="hud">
-    <div>Moves: <span id="moves">0</span></div>
-    <div>Best Score: <span id="best-score">-</span></div>
-    <div>time:<span id="time">0</span></div>
-    <button id="newGameBtn">New Game</button>
+  <!-- HUD: moves, best score, time, new game button -->
+  <section id="hud" aria-label="Game heads-up display">
+    <div>Moves: <span id="moves" aria-live="polite">0</span></div>
+    <div>Best Score: <span id="best-score" aria-live="polite">-</span></div>
+    <div>Time: <span id="time" aria-live="polite">0:00</span></div>
+    <button id="newGameBtn" type="button">New Game</button>
   </section>
 
-  <main id="gameBoard"></main>
+  <!-- Game board -->
+  <main id="gameBoard" role="grid" aria-label="Memory game board"></main>
 
   <footer>
-    <p>Icons by <a href="https://www.flaticon.com/" target="_blank">Flaticon</a></p>
+    <p>Icons by <a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer">Flaticon</a></p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Win screen overlay -->
+  <div id="win-screen">
+    <h1 id="win-title">YOU WIN 🎉</h1>
+    <p id="win-message">Great job! You solved the memory game.</p>
+    <button id="play-again-btn" type="button">Play again</button>
+  </div>
+
+  <noscript>
+    <p>Please enable JavaScript to play this game.</p>
+  </noscript>
+
+  <!-- Confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+
+  <!-- Main game script -->
+  <script src="script.js" defer></script>
 </body>
 </html>
